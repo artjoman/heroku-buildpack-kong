@@ -26,7 +26,7 @@ local default_admin_port_ssl  = 8444
 -- Read environment variables for runtime config
 local port              = os.getenv("PORT") or default_proxy_port
 local expose_service    = os.getenv("KONG_EXPOSE") -- `proxy` (default), `admin`, `adminssl`, `proxyssl`
-local pg_url            = os.getenv("DATABASE_URL") or "postgres://localhost:5432/kong"
+local pg_url            = os.getenv("FLAGS_DATABASE_URL") or "postgres://localhost:5432/kong"
 
 local parsed_pg_url = url.parse(pg_url, default)
 
