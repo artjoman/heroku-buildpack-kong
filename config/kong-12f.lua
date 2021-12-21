@@ -115,3 +115,4 @@ env_file:write("export KONG_PG_DATABASE="..pg_database.."\n")
 
 env_file:close()
 print("Wrote environment exports: "..rel_env_file)
+print("DATABASE_URL: "..pg_url.."\n")
